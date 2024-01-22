@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Python Article Writing</title>
+</head>
+
+<body>
+    <div>
+        <center>
+
+            <form method="POST">
+
+                <div class="selection-box-group" id="main-box">
+                    <select name="type" class="selection-box">
+                        <option value="article" {% if type == 'article' %}selected{% endif %}>ARTICLE</option>
+                        <option value="blog" {% if type == 'blog' %}selected{% endif %}>BLOG ENTR</option>
+                        <option value="answer" {% if type == 'answer' %}selected{% endif %}>ANSWER TO A QUESTION</option>
+                        <option value="confirm_email" {% if type == 'confirm_email' %}selected{% endif %}>CONFIRMATION EMAIL</option>
+                        <option value="cancel_email" {% if type == 'cancel_email' %}selected{% endif %}>CANCELLATION EMAIL</option>
+                        <option value="instagram" {% if type == 'instagram' %}selected{% endif %}>POST FOR INSTAGRAM</option>
+                        <option value="facebook" {% if type == 'facebook' %}selected{% endif %}>POST FOR FACEBOOK</option>
+                        <option value="tik_tok" {% if type == 'tik_tok' %}selected{% endif %}>POST FOR TIK TOK</option>
+                        <option value="amazon_description" {% if type == 'amazon_description' %}selected{% endif %}>AMAZON PRODUCT DESCRIPTION</option>
+                        <option value="amazon_title" {% if type == 'amazon_title' %}selected{% endif %}>AMAZON PRODUCT TITLE</option>
+                        <option value="ecommerce" {% if type == 'ecommerce' %}selected{% endif %}>ECOMMERCE PRODUCT DESCRIPTION</option>
+                        <option value="keywords" {% if type == 'keywords' %}selected{% endif %}>KEYWORDS</option>
+                    </select>
+    
+                    <select name="emotion" class="selection-box">
+                        <option value="happiness" {% if emotion == 'happiness' %}selected{% endif %}>HAPPINESS</option>
+                        <option value="urgency" {% if emotion == 'urgency' %}selected{% endif %}>URGENCY</option>
+                        <option value="inspiration" {% if emotion == 'inspiration' %}selected{% endif %}>INSPIRATION</option>
+                        <option value="tranquility" {% if emotion == 'tranquility' %}selected{% endif %}>TRANQUILITY</option>
+                        <option value="surprise" {% if emotion == 'surprise' %}selected{% endif %}>SURPRISE</option>
+                        <option value="trust" {% if emotion == 'trust' %}selected{% endif %}>TRUST</option>
+                        <option value="curiosity" {% if emotion == 'curiosity' %}selected{% endif %}>CURIOSITY</option>
+                        <option value="empathy" {% if emotion == 'empathy' %}selected{% endif %}>EMPATHY</option>
+                        <option value="enthusiasm" {% if emotion == 'enthusiasm' %}selected{% endif %}>ENTHUSIASM</option>
+                        <option value="seriousness" {% if emotion == 'seriousness' %}selected{% endif %}>SERIOUSNESS</option>
+                    </select>
+                </div>
+
+                <div>
+                    <div class="content-title-box">Title: </div>
+                    <textarea name="title" class="textarea">{{title}}</textarea>
+                </div>
+                
+                <div class="content-box">
+                    <textarea name="content" class="content-box">{{content}}</textarea>
+                </div>
+
+                <button type="submit" class="add-btn">Generate</button>
+
+            </form>
+            <br>
+
+        </div>
+    </center>
+</body>
+
+</html>
